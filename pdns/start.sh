@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Give time to database to boot up
-sleep 10
+sleep 30
 
 # Import schema structure
 if [ -e "pdns.sql" ]; then

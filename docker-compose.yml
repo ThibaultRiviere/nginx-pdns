@@ -1,20 +1,19 @@
 version: '2'
 
 services:
+
   database:
     image: mysql
-    ports:
-      - "3306:3306"
     env_file:
-      - database.env
+      - env/database.env
 
   pdns:
-    build: .
+    build: pdns
     links:
       - database
     ports:
       - "53:53/tcp"
       - "53:53/udp"
-      - "80:80"
+      - "127.0.0.1:8001:80"
     env_file:
-      - database.env
+      - env/database.env
