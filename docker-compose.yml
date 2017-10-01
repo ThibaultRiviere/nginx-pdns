@@ -17,3 +17,12 @@ services:
       - "127.0.0.1:8001:80"
     env_file:
       - env/database.env
+
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf:/etc/nginx/conf.d
+      - ./nginx/certifs:/certifs
