@@ -39,7 +39,7 @@ curl -X PATCH --data '{"rrsets": [ {"name": "$SUBDOMAIN", "type": "CNAME", "chan
 ### Dig the domain
 
 ```
-dig example.local @$DOMAIN
+dig example.local @$IP
 ```
 
 
